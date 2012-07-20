@@ -1,2 +1,28 @@
-<h1>Urls#index</h1>
-<p>Find me in app/views/urls/index.html.erb</p>
+<h1>This is a Url Lengthener. </h1>
+<h2>It takes a url and makes it longer. </h2>
+
+It would have been a shortener, but no one gave us money for a short domain.
+<br \>
+Don't complain, it's like you are in chair in the sky.
+<br \>
+
+<h2> <a href= "/urls/new" > Lets go make a longer URL </a> </h2>
+
+
+
+
+
+<%@url.each do |url| %>
+<br \>
+<br \>
+
+
+Original URL: <a href="<%=url.original %>"> <%=url.original%> </a>
+<br \>
+Lengthened URL: <a href="<%="http://localhost:3000/#{url.appendage}" %>"> <%="http://localhost:3000/#{url.appendage}" %> </a>
+<% end %>
+
+<br \>
+<br \>
+
+<img src = "http://www.keithcourage.com/vinylcountdown/files/2011/10/LouisCK-540x330.jpg">

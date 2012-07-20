@@ -1,4 +1,7 @@
 UrlLengthener::Application.routes.draw do
+
+  match '/:appendage' => 'urls#redirect'
+
   get "urls/show"
 
   get "urls/new"
@@ -8,6 +11,8 @@ UrlLengthener::Application.routes.draw do
   get "urls/destroy"
 
   get "urls/index"
+
+  post "urls/create"
 
   get "urls/update"
 
