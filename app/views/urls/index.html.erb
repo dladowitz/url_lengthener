@@ -20,7 +20,9 @@ Don't complain, it's like you are in chair in the sky.
 Original URL: <a href="<%=url.original %>"> <%=url.original%> </a>
 <br \>
 
-Lengthened URL: <%=link_to root_url << url.appendage, url.original %>
+Lengthened URL: <%=link_to redirect_url(url.appendage), redirect_url(url.appendage) %>
+<br \>
+Times that fools have visited: <%=url.counter %>
 
 <!-- Lengthened URL: <a href="<%="http://localhost:3000/#{url.appendage}" %>"> <%="http://localhost:3000/#{url.appendage}" %> </a> -->
 <% end %>
@@ -29,3 +31,4 @@ Lengthened URL: <%=link_to root_url << url.appendage, url.original %>
 <br \>
 
 <img src = "http://www.keithcourage.com/vinylcountdown/files/2011/10/LouisCK-540x330.jpg">
+s
