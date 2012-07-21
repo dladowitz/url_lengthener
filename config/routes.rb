@@ -1,7 +1,7 @@
 UrlLengthener::Application.routes.draw do
   root :to => 'urls#index'
 
-  match '/:appendage' => 'urls#redirect'
+  match '/:appendage' => 'urls#redirect', :as => 'redirect'
 
   get "urls/show"
 
