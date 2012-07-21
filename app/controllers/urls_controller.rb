@@ -11,14 +11,14 @@ class UrlsController < ApplicationController
     @url.save
     @url.appendage = @url.id
     @url.save
+
     redirect_to urls_index_path
   end
 
   def redirect
+
     @url  = Url.find(params[:appendage])
-    # logger.info("XXXXX #{@url}")
-    @url.counter += 1
-    @url.save
+    @url.increment_counter!
 
     redirect_to @url.original
   end
