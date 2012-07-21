@@ -16,6 +16,10 @@ class UrlsController < ApplicationController
 
   def redirect
     @url  = Url.find(params[:appendage])
+    # logger.info("XXXXX #{@url}")
+    @url.counter += 1
+    @url.save
+
     redirect_to @url.original
   end
 
@@ -33,3 +37,4 @@ class UrlsController < ApplicationController
   def update
   end
 end
+

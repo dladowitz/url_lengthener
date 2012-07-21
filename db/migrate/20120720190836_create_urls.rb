@@ -4,6 +4,7 @@ class CreateUrls < ActiveRecord::Migration
       t.string :original
       t.string :appendage
 
+
       t.timestamps
     end
   end
