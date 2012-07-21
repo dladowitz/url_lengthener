@@ -19,7 +19,10 @@ Don't complain, it's like you are in chair in the sky.
 
 Original URL: <a href="<%=url.original %>"> <%=url.original%> </a>
 <br \>
-Lengthened URL: <a href="<%="http://localhost:3000/#{url.appendage}" %>"> <%="http://localhost:3000/#{url.appendage}" %> </a>
+
+Lengthened URL: <%=link_to root_url << url.appendage, url.original %>
+
+<!-- Lengthened URL: <a href="<%="http://localhost:3000/#{url.appendage}" %>"> <%="http://localhost:3000/#{url.appendage}" %> </a> -->
 <% end %>
 
 <br \>
